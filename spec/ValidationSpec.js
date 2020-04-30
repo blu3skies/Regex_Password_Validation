@@ -1,7 +1,7 @@
 describe("Validation", function() {
 
   it('valid should be true until not', function(){
-    var password = new Password("djI38D55")
+    var password = new Password("djI38D55!")
     expect(password.validate()).toEqual(true)
   })
 
@@ -24,5 +24,9 @@ describe("Validation", function() {
     var password = new Password('JfkdfjKj')
     expect(password.validate()).toEqual(false)
   })
-
+  
+  it('should return false if pw has symbols', function(){
+    var password = new Password('fjd3IR9.;')
+    expect(password.validate()).toEqual(true)
+  })
 });

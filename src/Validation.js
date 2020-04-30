@@ -9,6 +9,7 @@ Password.prototype.validate = function() {
   this.checkLowerCase()
   this.checkUpperCase()
   this.checkNumber()
+  this.checkNoSpecialChar()
   return this.valid
 }
   
@@ -26,6 +27,9 @@ Password.prototype.checkUpperCase = function() {
 
 Password.prototype.checkNumber = function() {
   if (!this.password.match(/[0-9]/)) this.valid = false
+}
+Password.prototype.checkNoSpecialChar = function() {
+  if (!this.password.match(/[ `!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/)) this.valid = false
 }
 
 
