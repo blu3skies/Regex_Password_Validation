@@ -20,9 +20,9 @@ describe("Validation", function() {
     expect(password.validate()).toEqual(false)
   })
 
-  // it('should return false if pw doesnt contain number', function(){
-  //   var password = new Password('JfkdfjKj')
-  //   expect(password.validate()).toEqual(false)
-  // })
+  it('should return false if pw doesnt contain number', function(){
+    var password = new Password('JfkdfjKj')
+    expect(password.validate()).toEqual(false)
+  })
 
 });

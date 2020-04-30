@@ -8,6 +8,7 @@ Password.prototype.validate = function() {
   this.checkLength()
   this.checkLowerCase()
   this.checkUpperCase()
+  this.checkNumber()
   return this.valid
 }
   
@@ -23,6 +24,9 @@ Password.prototype.checkUpperCase = function() {
   if (!this.password.match(/[A-Z]/)) this.valid = false
 }
 
+Password.prototype.checkNumber = function() {
+  if (!this.password.match(/[0-9]/)) this.valid = false
+}
 
 
 
