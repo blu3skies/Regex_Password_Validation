@@ -10,4 +10,19 @@ describe("Validation", function() {
     expect(password.validate()).toEqual(false)
   })
 
+  it("should return false if password doesn't contain lowercase", function() {
+    var password = new Password('JHD5FJ53')
+    expect(password.validate()).toEqual(false)
+  })
+
+  it("should return false if pw doesnt have uppercase letters", function() {
+    var password = new Password('!fdjn345')
+    expect(password.validate()).toEqual(false)
+  })
+
+  // it('should return false if pw doesnt contain number', function(){
+  //   var password = new Password('JfkdfjKj')
+  //   expect(password.validate()).toEqual(false)
+  // })
+
 });
