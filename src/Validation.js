@@ -4,13 +4,15 @@ function Password(pw) {
 }
 
 Password.prototype.validate = function() {
-  // checkLength(this.password)
+
+  // console.log(this.password.length)
+  this.checkLength()
   return this.valid
 }
   
-  function checkLength() {
-    valid = (this.password.length > 6) ? true : false;
-  }
+Password.prototype.checkLength = function() {
+    this.valid = (this.password.length > 6) ? true : false;
+}
 
 
 
